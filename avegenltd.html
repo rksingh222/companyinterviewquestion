@@ -106,3 +106,69 @@ int main()
     }
 }
 
+                             
+// final working changes
+                             
+
+int main()
+{
+    char b[18] = {'g','e','e','k','s',' ','f','o','r',' ','g','e','e','k','s',' ', ' ', ' '};
+    char c[4][6] ;
+    //n is column
+    //m is rows
+    int m = 4 , n = 6;
+    int l = 0;
+    for(int i = 0; i < m ; i++){
+         for (int j= 0; j<n; j++){
+            if(i == j){
+                 c[i][j] = b[l++];
+            }
+            else{
+                c[i][j] = '_';
+            }
+        }
+    } 
+    if(m == n){
+        for(int k = 0; k < m ; k++){
+        int i = 0;
+        int j = k + 1;
+        do {
+            c[i][j] = b[l++];
+            printf("%d %d",i,j);
+            printf("%c", c[i][j]);
+            i = i + 1;
+            j = j + 1;
+            
+        }while(j <= n-1);
+    }
+    }
+    else{
+        for(int k = 0; k < m ; k++){
+        int i = 0;
+        int j = k + 1;
+        do {
+            c[i][j] = b[l++];
+            printf("%d %d",i,j);
+            printf("%c", c[i][j]);
+            i = i + 1;
+            j = j + 1;
+            
+        }while( (i < m) && (j <= n-1));
+    }
+    }
+    
+    
+    
+    //printf("value of the assigned array");
+    printf("\n");
+    for (int i =0 ; i< m; i++){
+        for (int j = 0; j< n; j++){
+            printf("%c",c[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+  
+                             
+                             
