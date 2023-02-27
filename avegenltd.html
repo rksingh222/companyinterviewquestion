@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3] = {0, 1, 2, 0, 1, 2, 0, 1, 2};
+    for (int i =0 ; i< 3; i++){
+        for (int j = 0; j< 3; j++){
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    for (int i=0; i<3;i++){
+        for (int j= 0; j<3; j++){
+            if(i == j){
+                 printf("%d", a[i][j]);
+            }
+            else if ( i < j){
+                printf("%d", a[i][j]);
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    char b[5] = {0,1,2,3,4,5};
+    char c[2][3] ;
+    int m = 2 , n = 3;
+    int l = 0;
+    for(int i = 0; i < m ; i++){
+         for (int j= 0; j<n; j++){
+            if(i == j){
+                 c[i][j] = b[l++];
+            }
+            else{
+                c[i][j] =0;
+            }
+        }
+    } 
+    for(int k = 0; k < m ; k++){
+        int i = 0;
+        int j = k + 1;
+        do {
+            c[i][j] = b[l++];
+            i = i + 1;
+            j = j + 1;
+            
+        }while(j != n);
+    }
+    //printf("value of the assigned array");
+    //printf("\n");
+    for (int i =0 ; i< 3; i++){
+        for (int j = 0; j< 3; j++){
+            printf("%d",c[i][j]);
+        }
+        printf("\n");
+    }
+}
